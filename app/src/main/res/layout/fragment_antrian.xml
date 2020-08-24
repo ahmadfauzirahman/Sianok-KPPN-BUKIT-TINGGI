@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.AntrianFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:scrollingCache="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:src="@drawable/antrian" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/qsbold"
+                    android:id="@+id/textJumlahSPM"
+                    android:paddingBottom="10dp"
+                    android:text="Jumlah SPM"
+                    android:textAlignment="center"
+                    android:textSize="26sp" />
+
+                <EditText
+                    android:id="@+id/jumlah_spm_s"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/et_custom"
+                    android:fontFamily="@font/quicksandmedium"
+                    android:hint="Jumlah SPM"
+                    android:inputType="number"
+                    android:padding="15dp"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/daftarAntrian"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorPrimary"
+                android:fontFamily="@font/quicksandsemibold"
+                android:padding="15dp"
+                android:text="Daftar Antrian"
+                android:textColor="#ffffff"></Button>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/antrianSudahTerdaftar"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/qsbold"
+                    android:id="@+id/hariKedatangan"
+                    android:paddingBottom="10dp"
+                    android:text="E-TIKET Anda"
+                    android:textAlignment="center"
+                    android:textSize="26sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/qsbold"
+                    android:paddingBottom="10dp"
+                    android:text="Tanggal Kedatangan"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/tanggalDatang"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+
+                    android:background="@drawable/et_custom"
+                    android:fontFamily="@font/quicksandmedium"
+                    android:hint="Tanggal Kedatangan"
+                    android:inputType="number"
+                    android:padding="15dp"
+                    android:textSize="15sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/qsbold"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Nomor Antrian"
+                    android:textSize="20sp" />
+                <EditText
+                    android:id="@+id/nomorAntrian"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+
+                    android:background="@drawable/et_custom"
+                    android:fontFamily="@font/quicksandmedium"
+                    android:hint="Nomor Antrian"
+                    android:inputType="number"
+                    android:padding="15dp"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/downloadPdf"
+                android:layout_marginBottom="10dp"
+                android:background="@color/red"
+                android:fontFamily="@font/quicksandsemibold"
+                android:padding="15dp"
+                android:text="Download PDF"
+                android:textColor="#ffffff"></Button>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

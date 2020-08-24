@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "756366493856",
+    "firebase_url": "https://kppnbukittinggi-e2f06.firebaseio.com",
+    "project_id": "kppnbukittinggi-e2f06",
+    "storage_bucket": "kppnbukittinggi-e2f06.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:756366493856:android:c9ac6771a45e739954e1c5",
+        "android_client_info": {
+          "package_name": "ci.ahmadfauzirahman.sianokapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "756366493856-p5vbnij17svlrspm8jljqpt1crl41sfv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ci.ahmadfauzirahman.sianokapp",
+            "certificate_hash": "6b94a52a17180d1a299c5c7252149f65da9e66c3"
+          }
+        },
+        {
+          "client_id": "756366493856-lbdj4d233oo9hvqjm9de91cu04kig7l8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgNq29iYijYl_yWJ6zTfGzR77wl1Iao-8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "756366493856-lbdj4d233oo9hvqjm9de91cu04kig7l8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
