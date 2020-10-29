@@ -56,11 +56,11 @@ public class NotifikasiFragment extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_notifikasi, container, false);
         sessionManager = new SessionManager(getContext());
-        kode_stakeholder= sessionManager.getUserDetail().get("username").toString();
+        kode_stakeholder = sessionManager.getUserDetail().get("username").toString();
         final String token = sessionManager.getToken();
         final String stakeholder = sessionManager.getUserDetail().get("username");
 
-        insertToken(token,stakeholder);
+        insertToken(token, stakeholder);
         swipeRefreshLayout = view.findViewById(R.id.swpNotifikasi);
         recyclerView = (RecyclerView) view.findViewById(R.id.reyNotifikasi);
         getAllNotifikasi(kode_stakeholder);
@@ -80,7 +80,7 @@ public class NotifikasiFragment extends Fragment {
     private void insertToken(String token, String kode_stakeholder) {
         ApiInterface apiService =
                 ApiClient.getClient().create(ApiInterface.class);
-        Call<TokenResponse> call = apiService.insertToken(token,kode_stakeholder);
+        Call<TokenResponse> call = apiService.insertToken(token, kode_stakeholder);
         call.enqueue(new Callback<TokenResponse>() {
             @Override
             public void onResponse(Call<TokenResponse> call, Response<TokenResponse> response) {
@@ -105,8 +105,13 @@ public class NotifikasiFragment extends Fragment {
                 System.out.println("OnResponse Data" + response.body().getResults());
 
                 if (response.isSuccessful()) {
-                    List<NotifikasiModel> notifikasiModels = response.body().getResults();
-                    recyclerView.setAdapter(new AdapterNotifikasi(notifikasiModels, R.layout.list_notifikasi, getContext()));
+                    if (response.body().getCon()) {
+                        List<NotifikasiModel> notifikasiModels = response.body().getResults();
+                        recyclerView.setAdapter(new AdapterNotifikasi(notifikasiModels, R.layout.list_notifikasi, getContext()));
+                    } else {
+                        Toast.makeText(getContext(), "Data Notifikasi Kosong", Toast.LENGTH_SHORT).show();
+
+                    }
                 } else {
                     System.out.println("OnResponse Data" + response.body().toString());
 

@@ -33,6 +33,7 @@ public class PagerAdapter extends FragmentPagerAdapter {
             case 1:
                 AntrianFragment antrianFragment = new AntrianFragment();
                 return antrianFragment;
+
             case 2:
                 AkunFragment akunFragment = new AkunFragment();
                 return akunFragment;

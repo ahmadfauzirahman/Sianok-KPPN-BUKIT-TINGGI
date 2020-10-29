@@ -123,6 +123,10 @@ public class MainActivity extends AppCompatActivity {
             builder.show();
         }
 
+        if (item.getItemId() == R.id.privacy) {
+            startActivity(new Intent(MainActivity.this, Privacy.class));
+        }
+
         return true;
     }
 

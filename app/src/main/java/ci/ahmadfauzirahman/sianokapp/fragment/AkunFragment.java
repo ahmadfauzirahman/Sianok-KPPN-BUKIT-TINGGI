@@ -42,7 +42,7 @@ EditText namaE,kdE,emailE,teleponE;
         kode_stakeholder= sessionManager.getUserDetail().get("username").toString();
         nama= sessionManager.getUserDetail().get("nama").toString();
         email= sessionManager.getUserDetail().get("EMAIL").toString();
-        telp= sessionManager.getUserDetail().get("telepon").toString();
+        telp= "07777";
         final String token = sessionManager.getToken();
 
         namaE = view.findViewById(R.id.nama);
